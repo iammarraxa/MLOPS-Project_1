@@ -59,7 +59,7 @@ class ModelEvaluation:
         })
         for col in ['Vehicle_Age_lt_1_Year', 'Vehicle_Age_gt_2_Years', 'Vehicle_Damage_Yes']:
             if col in df.columns:
-                df = df.drop('_id', axis=1)
+                df = df[col].astype(int)
             return df
         
     def _drop_id_column(self, df: pd.DataFrame):
@@ -88,7 +88,7 @@ class ModelEvaluation:
             best_model_f1_score = None
             best_model = self.get_best_model()
             
-            if best_model is None:
+            if best_model is not None:
                 logging.info(f'Computing f1 score for production model')
                 y_hat_best_model = best_model.predict(x)
                 best_model_f1_score = f1_score(y, y_hat_best_model)

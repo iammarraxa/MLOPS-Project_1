@@ -5,6 +5,7 @@ from src.entity.estimator import MyModel
 from src.cloud_storage.aws_storage import SimpleStorageService
 
 class Proj1Estimator:
+    '''saves & retrieves model from s3 bucket and then do prediction'''
     def __init__(self, bucket_name, model_path):
         self.bucket_name = bucket_name
         self.s3 = SimpleStorageService()
