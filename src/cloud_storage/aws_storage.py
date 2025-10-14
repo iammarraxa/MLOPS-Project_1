@@ -74,7 +74,7 @@ class SimpleStorageService:
             model_file = model_dir + '/' + model_name if model_dir else model_name
             file_object = self.get_file_object(model_file, bucket_name)
             model_obj = self.read_object(file_object, decode=False)
-            model = pickle.load(model_obj)
+            model = pickle.loads(model_obj)
             logging.info('Production model loaded from S3 bucekt')
             return model
         except Exception as e:
