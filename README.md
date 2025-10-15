@@ -1,8 +1,3 @@
-Perfect 🚀 — since this is a full-fledged **MLOps project** integrating *Python, MongoDB, AWS, CI/CD, Docker, EC2, ECR,* and *Flask*, your README should feel like a **mini case study + portfolio showcase**.
-Here’s a **beautiful, recruiter-impressive README.md** that explains your project professionally while still being developer-friendly and visually engaging 👇
-
----
-
 # 🚗 Vehicle Data Prediction — End-to-End MLOps Project
 
 ### 🔥 *An intelligent, fully-automated ML system built from scratch with CI/CD, Docker, AWS, and scalable cloud infrastructure.*
